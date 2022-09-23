@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CoursesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/courses', [CoursesController::class, 'courses'])->middleware('checktoken');
+Route::get('/course/{first}/{second}', [CoursesController::class, 'getCourse'])->middleware('checktoken');

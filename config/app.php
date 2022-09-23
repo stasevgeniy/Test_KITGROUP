@@ -17,6 +17,8 @@ return [
 
     'name' => env('APP_NAME', 'Laravel'),
 
+    'BearerToken' => env('APP_BearerToken', 'tokenauth12345'),
+
     /*
     |--------------------------------------------------------------------------
     | Application Environment
